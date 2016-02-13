@@ -9,7 +9,7 @@
 __version__ = '0.0.1'
 __author__  = 'Asahi Himura <himura@nitolab.com>'
 __date__    = '13/2/2016'
-__license__ = "BSD-3-Clause"
+__license__ = "MIT"
 
 
 from .twe_responce import TWE_Responce
