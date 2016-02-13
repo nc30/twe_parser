@@ -7,14 +7,22 @@ class TWE_Responce(object):
 
     def __init__( self, string ):
         self.string = string
-        self._setvalues( self.parse() )
-        pass
+        values = self.parse()
+
+        if not values:
+            return None
+
+        self._setvalues( values )
+
 
     def parse( self, string=None ):
         if not string:
             string = self.string
 
-        r = re.match( self.r, string.decode() )
+        if type( string ) == bytes:
+            string = string.decode()
+
+        r = re.match( self.r, string )
         if r:
             g = r.groups()
             pr = {}
