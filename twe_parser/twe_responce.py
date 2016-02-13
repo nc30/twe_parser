@@ -4,7 +4,8 @@
 import re
 class TWE_Responce(object):
     r='^:(..)(..)(..)(..)(..)(........)(..)(....)(..)(....)(..)(..)(..)(..)(..)(..)(..)(..)(..)'
-
+    group = {}
+    
     def __init__( self, string ):
         self.string = string
         values = self.parse()
