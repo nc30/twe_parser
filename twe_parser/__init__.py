@@ -6,7 +6,7 @@
 '''
 
 
-__version__ = '0.0.3'
+__version__ = '0.0.4'
 __author__  = 'Asahi Himura <himura@nitolab.com>'
 __date__    = '13/2/2016'
 __license__ = "MIT"
