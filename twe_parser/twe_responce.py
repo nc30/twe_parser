@@ -1,6 +1,9 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
 import re
 class TWE_Responce(object):
-    r='^:(..)(..)(..)(..)(..)(........)(..)(....)(..)(....)(..)(..)(..)(..)(..)(..)(..)(..)(..)\\r\\n'
+    r='^:(..)(..)(..)(..)(..)(........)(..)(....)(..)(....)(..)(..)(..)(..)(..)(..)(..)(..)(..)'
 
     def __init__( self, string ):
         self.string = string
@@ -33,6 +36,7 @@ class TWE_Responce(object):
         self.VOLTAGE = pr['VOLTAGE']
         self.NONE = pr['NONE']
         self.DIN = pr['DIN']
+        self.DICANGE = pr['DICANGE']
         self.AD1 = pr['AD1']
         self.AD2 = pr['AD2']
         self.AD3 = pr['AD3']
@@ -42,6 +46,4 @@ class TWE_Responce(object):
         self.group = pr
 
     def rsrp( self ):
-        return ( 7 * int(self.LQI, 2) - 1970 ) / 20
-
-
+        return ( 7 * int(self.LQI, 16) - 1970 ) / 20
