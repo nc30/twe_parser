@@ -33,6 +33,7 @@ class TWE_Responce(object):
         else:
             return None
 
+
     def _setvalues( self, pr ):
         self.enable = True
         self.SID = pr['SID']
@@ -55,6 +56,12 @@ class TWE_Responce(object):
         self.ADCOMP = pr['ADCOMP']
         self.SUM = pr['SUM']
         self.group = pr
+
+        self.D1 = True if int( pr['DIN'], 2 ) & 0b0001 else False
+        self.D2 = True if int( pr['DIN'], 2 ) & 0b0010 else False
+        self.D3 = True if int( pr['DIN'], 2 ) & 0b0100 else False
+        self.D4 = True if int( pr['DIN'], 2 ) & 0b1000 else False
+
 
     def rsrp( self ):
         return ( 7 * int(self.LQI, 16) - 1970 ) / 20
