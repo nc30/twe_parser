@@ -5,6 +5,7 @@ import re
 class TWE_Responce(object):
     r='^:(..)(..)(..)(..)(..)(........)(..)(....)(..)(....)(..)(..)(..)(..)(..)(..)(..)(..)(..)'
     group = {}
+    enable = False
     
     def __init__( self, string ):
         self.string = string
@@ -33,6 +34,7 @@ class TWE_Responce(object):
             return None
 
     def _setvalues( self, pr ):
+        self.enable = True
         self.SID = pr['SID']
         self.COMMAND = pr['COMMAND']
         self.PACKET = pr['PACKET']
