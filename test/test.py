@@ -45,5 +45,15 @@ print( responce.ADCOMP )
 print( "-- Check SUM")
 print( responce.SUM )
 
+
+print( "-- Digital IN 1 status" )
+print( responce.D1 )
+print( "-- Digital IN 2 status" )
+print( responce.D2 )
+print( "-- Digital IN 3 status" )
+print( responce.D3 )
+print( "-- Digital IN 4 status" )
+print( responce.D4 )
+
 print( "-- dBm [dBm] ( Reference value )")
 print( responce.rsrp() )
