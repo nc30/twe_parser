@@ -2,7 +2,7 @@
 
 import twe_parser
 
-code = b':7881150175810000380026C9000C04220000FFFFFFFFFFA7'
+code = b':7881150175810000380026C9000C04220200FFFFFFFFFFA7'
 responce = twe_parser.parse( code )
 
 print( responce )
